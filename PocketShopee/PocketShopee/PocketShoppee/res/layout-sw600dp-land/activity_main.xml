@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sachin Tendulkar" />
+    
+     <LinearLayout
+        android:id="@+id/linearhorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/black"
+        android:layout_alignParentBottom="true">
+        
+        <Button
+            android:id="@+id/featured_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:text="Featured"
+            android:textColor="#FF9966"/>
+        
+        <Button 
+            android:id="@+id/shop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF9966"
+            android:text="Shop"/>
+		
+		<Button
+            android:id="@+id/favorite_button" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF9966"
+            android:text="Favorite"/>
+        
+        <Button 
+            android:id="@+id/notification_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF9966"
+            android:text="Notification"/>
+        
+        <Button 
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF9966"
+            android:text="Settings"/>
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>

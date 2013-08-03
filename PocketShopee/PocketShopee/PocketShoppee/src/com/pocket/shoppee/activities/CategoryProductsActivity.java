@@ -65,6 +65,18 @@ public class CategoryProductsActivity extends FragmentActivity {
 		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).build();
 		ImageLoader.getInstance().init(config);*/
 		
+		Button backButton =(Button)findViewById(R.id.backbutton);
+		
+		backButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Toast.makeText(CategoryProductsActivity.this, "Back Clicked", Toast.LENGTH_LONG).show();
+				finish();
+			}
+		});
+		
 		Void params = null;
 		new CategoryProductsDownloadTask().execute(params);
 		

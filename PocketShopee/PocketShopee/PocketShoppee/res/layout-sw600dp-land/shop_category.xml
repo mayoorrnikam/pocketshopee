@@ -23,6 +23,7 @@
         android:layout_alignLeft="@+id/icon_image"
         android:layout_below="@+id/icon_image"
         android:text="TextView"
+        android:ellipsize="end"
         android:textColor="#997d55"
         android:textSize="15sp" />
 
@@ -33,6 +34,7 @@
         android:layout_alignLeft="@+id/icon_text"
         android:layout_below="@+id/icon_text"
         android:text="TextView"
+        android:ellipsize="end"
         android:textColor="#606060"
         android:textSize="15sp" />
 

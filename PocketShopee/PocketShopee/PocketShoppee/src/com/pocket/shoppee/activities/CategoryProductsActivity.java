@@ -105,7 +105,6 @@ public class CategoryProductsActivity extends FragmentActivity {
 						});
 				alertbox.show();
 
-
 			}
 		});
 

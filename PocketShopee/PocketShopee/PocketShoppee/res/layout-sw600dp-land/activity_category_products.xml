@@ -19,6 +19,8 @@
              android:id="@+id/backbutton"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="20dp"
              android:background="@drawable/back_btn"/>
 
         <TextView
@@ -27,7 +29,7 @@
 	       android:layout_width="wrap_content"
 	       android:layout_centerVertical="true"
 	       android:text="Back"
-	       android:layout_marginLeft="15dp"
+	       android:layout_marginLeft="35dp"
 	       android:textColor="#FFFFFF"
 	       android:textSize="20sp"/>
          
@@ -45,7 +47,8 @@
 	   <FrameLayout
 	       android:id="@+id/bagcircleicon"
 	       android:layout_toRightOf="@+id/title"
-	       android:layout_marginLeft="240dp"
+	       android:layout_marginLeft="220dp"
+	       android:layout_centerVertical="true"
 	       android:layout_width="wrap_content"
 	       android:layout_height="wrap_content"
 	       android:layout_gravity="right" >
@@ -64,6 +67,7 @@
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
 		       android:text="00"
+		       android:layout_marginLeft="5dp"
 		       android:textAlignment="textEnd"
 		       android:textColor="@android:color/white" />
 
@@ -71,8 +75,11 @@
 	   
 	   <EditText 
 	       android:layout_marginLeft="20dp"
+	       android:layout_marginRight="10dp"
 	       android:layout_width="wrap_content"
 	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
 	       android:layout_toRightOf="@+id/bagcircleicon"
 	       android:drawableStart="@drawable/search_icon"
 	       android:paddingLeft="5dp"

@@ -247,14 +247,14 @@ public class ShopActivity extends FragmentActivity {
 						String url3 = "http://dummyimage.com/250/ffffff/000000";
 						String url4= "http://dummyimage.com/300x300/000/fff.jpg";
 						String url5 ="http://ec2-23-23-50-155.compute-1.amazonaws.com/awsmage/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/b/k/bk1_2.jpeg";
-						String url6 ="http://ec2-23-23-50-155.compute-1.amazonaws.com//awsmage//media//catalog//product//cache//0//image//9df78eab33525d08d6e5fb8d27136e95//b//k//bk1_2.jpeg";
+						String url6 ="http://ec2-23-23-50-155.compute-1.amazonaws.com/awsmage/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/b/l/bl1_2.jpeg";
 						//String URL3 = "http://www.google.com/logos/2013/anne_cath_vestlys_93rd_birthday-1035005-hp.jpg";
 
 						
 						if(i%2 == 0)
-							imagefield.add(url1);
-						else
 							imagefield.add(url5);
+						else
+							imagefield.add(url6);
 		             gridView.setAdapter(mShopAdapter);
 		             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

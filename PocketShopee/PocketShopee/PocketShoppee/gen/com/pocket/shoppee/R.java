@@ -428,51 +428,66 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static final int GridView01=0x7f04000a;
-        public static final int TextView01=0x7f040027;
-        public static final int action_settings=0x7f04002d;
-        public static final int add_to_cart=0x7f04001d;
-        public static final int alert=0x7f040022;
+        public static final int TextView01=0x7f04002b;
+        public static final int action_settings=0x7f04003c;
+        public static final int add_to_cart=0x7f04001f;
+        public static final int alert=0x7f040024;
         public static final int backbutton=0x7f040006;
         public static final int backtext=0x7f040007;
         public static final int bagcircleicon=0x7f040009;
         public static final int bottom=0x7f040003;
-        public static final int favorite=0x7f040023;
+        public static final int bt1=0x7f04002c;
+        public static final int bt2=0x7f04002d;
+        public static final int bt3=0x7f04002e;
+        public static final int bt4=0x7f04002f;
+        public static final int bt5=0x7f040030;
+        public static final int create_account_btn=0x7f040033;
+        public static final int facebook_connect=0x7f040034;
+        public static final int favorite=0x7f040025;
         public static final int favorite_button=0x7f04000e;
         public static final int featured_button=0x7f04000c;
-        public static final int horizontalScrollView1=0x7f040025;
-        public static final int icon_color=0x7f04001a;
-        public static final int icon_description=0x7f04001c;
-        public static final int icon_image=0x7f04002a;
-        public static final int icon_price1=0x7f04001e;
-        public static final int icon_price2=0x7f04001f;
-        public static final int icon_size=0x7f04001b;
-        public static final int icon_text=0x7f040019;
-        public static final int icon_textdescription=0x7f04002b;
-        public static final int indicator=0x7f040012;
-        public static final int left_arrow=0x7f040024;
+        public static final int heart_icon=0x7f040012;
+        public static final int horizontalScrollView1=0x7f040027;
+        public static final int icon_color=0x7f040029;
+        public static final int icon_description=0x7f04001e;
+        public static final int icon_image=0x7f040038;
+        public static final int icon_price1=0x7f040020;
+        public static final int icon_price2=0x7f040021;
+        public static final int icon_size=0x7f04002a;
+        public static final int icon_text=0x7f04001b;
+        public static final int icon_textdescription=0x7f04003a;
+        public static final int indicator=0x7f040015;
+        public static final int lable_color=0x7f04001c;
+        public static final int lable_size=0x7f04001d;
+        public static final int left_arrow=0x7f040026;
         public static final int linearhorizontal=0x7f04000b;
         public static final int linearhorizontalheader=0x7f040005;
         public static final int none=0x7f040000;
         public static final int notification_button=0x7f04000f;
-        public static final int pager=0x7f040011;
-        public static final int product_big_box=0x7f040017;
-        public static final int realtabcontent=0x7f040028;
-        public static final int relativeLayout1=0x7f040018;
-        public static final int relativedetails=0x7f040013;
-        public static final int right_arrow=0x7f040026;
+        public static final int pager=0x7f040014;
+        public static final int product_big_box=0x7f04001a;
+        public static final int product_bottom=0x7f040039;
+        public static final int product_top=0x7f040037;
+        public static final int realtabcontent=0x7f040035;
+        public static final int relativedetails=0x7f040016;
+        public static final int relativehorizontal=0x7f040011;
+        public static final int right_arrow=0x7f040028;
         public static final int settings_button=0x7f040010;
-        public static final int share=0x7f040021;
-        public static final int share_alert_favorite=0x7f040020;
+        public static final int share=0x7f040023;
+        public static final int share_alert_favorite=0x7f040022;
         public static final int shop_button=0x7f04000d;
-        public static final int thumbsmall1=0x7f040014;
-        public static final int thumbsmall2=0x7f040015;
-        public static final int thumbsmall3=0x7f040016;
+        public static final int signin_btn=0x7f040032;
+        public static final int textView1=0x7f040013;
+        public static final int textView2=0x7f040031;
+        public static final int thumbsmall1=0x7f040017;
+        public static final int thumbsmall2=0x7f040018;
+        public static final int thumbsmall3=0x7f040019;
         public static final int title=0x7f040008;
         public static final int top=0x7f040004;
         public static final int triangle=0x7f040001;
         public static final int underline=0x7f040002;
-        public static final int widget=0x7f04002c;
-        public static final int widget44=0x7f040029;
+        public static final int widget=0x7f04003b;
+        public static final int widget44=0x7f040036;
     }
     public static final class integer {
         public static final int default_circle_indicator_orientation=0x7f070000;
@@ -483,30 +498,35 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class layout {
         public static final int activity_category_products=0x7f030000;
-        public static final int activity_featured=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_product_details=0x7f030003;
-        public static final int activity_shop=0x7f030004;
-        public static final int activity_tab=0x7f030005;
-        public static final int catagory_products=0x7f030006;
-        public static final int icon=0x7f030007;
-        public static final int shop_category=0x7f030008;
+        public static final int activity_favorite=0x7f030001;
+        public static final int activity_featured=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_product_details=0x7f030004;
+        public static final int activity_products_details_demo=0x7f030005;
+        public static final int activity_setting=0x7f030006;
+        public static final int activity_shop=0x7f030007;
+        public static final int activity_tab=0x7f030008;
+        public static final int catagory_products=0x7f030009;
+        public static final int icon=0x7f03000a;
+        public static final int shop_category=0x7f03000b;
     }
     public static final class menu {
         public static final int catogory_products=0x7f0b0000;
         public static final int main=0x7f0b0001;
-        public static final int shop=0x7f0b0002;
+        public static final int products_details=0x7f0b0002;
+        public static final int shop=0x7f0b0003;
     }
     public static final class string {
         public static final int action_settings=0x7f0a0001;
         public static final int app_name=0x7f0a0000;
-        public static final int favorite=0x7f0a0007;
-        public static final int featured=0x7f0a0005;
+        public static final int favorite=0x7f0a0008;
+        public static final int featured=0x7f0a0006;
         public static final int hello_world=0x7f0a0002;
-        public static final int notification=0x7f0a0008;
-        public static final int setting=0x7f0a0009;
-        public static final int shop=0x7f0a0006;
+        public static final int notification=0x7f0a0009;
+        public static final int setting=0x7f0a000a;
+        public static final int shop=0x7f0a0007;
         public static final int title_activity_catogory_products=0x7f0a0004;
+        public static final int title_activity_products_details=0x7f0a0005;
         public static final int title_activity_shop=0x7f0a0003;
     }
     public static final class style {

@@ -64,17 +64,22 @@
 	   	   
    </RelativeLayout>
    
-	<GridView 
+	<GridView
 	    android:id="@+id/GridView01"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/linearhorizontal"
+	    android:layout_below="@+id/linearhorizontalheader"
 	    android:columnWidth="290dp"
 	    android:gravity="center"
 	    android:horizontalSpacing="10dp"
-	    android:layout_below="@+id/linearhorizontalheader"
 	    android:numColumns="3"
-	    android:padding="30dp"
-	    android:verticalSpacing="20dp">
+	    android:paddingTop="10dp"
+	    android:paddingRight="30dp"
+	    android:paddingLeft="30dp"
+	    android:paddingBottom="10dp"
+	    android:scrollbars="none"
+	    android:verticalSpacing="20dp" >
 	
 	</GridView>
 

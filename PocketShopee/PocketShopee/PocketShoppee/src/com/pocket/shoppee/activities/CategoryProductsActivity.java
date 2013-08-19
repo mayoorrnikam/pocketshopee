@@ -247,6 +247,8 @@ public class CategoryProductsActivity extends FragmentActivity {
 		        imagefield = new ArrayList<String>();
 		        
 		        int length = categoryProductsDataManager.getCategoryProductsArray().size();
+		        System.out.println("categoryProductsDataManager Length:"+ length );
+		        
 		        mShopAdapter = new ShopFragmentAdapter(CategoryProductsActivity.this, textTitleField, textDescriptionField, imagefield);
 		    	mShopAdapter.setCount(CategoryProductsDataManager.getSharedInstance().getCategoryProductsArray().size());
 		        
@@ -274,7 +276,8 @@ public class CategoryProductsActivity extends FragmentActivity {
 							Object listItem = gridView.getItemAtPosition(position);
 							
 							Toast.makeText(CategoryProductsActivity.this, "Clicked"+position, Toast.LENGTH_LONG).show();
-							
+							Intent prodDetailsIntent = new Intent(CategoryProductsActivity.this,ProductDetailsActivity.class);
+							startActivity(prodDetailsIntent);
 						}
 		            	 
 					});

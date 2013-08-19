@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name="com.pocket.shoppee.activities.ShopActivity"
-            android:label="@string/title_activity_shop">
+            android:label="@string/title_activity_shop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,11 +45,15 @@
         <activity
             android:name="com.pocket.shoppee.activities.CategoryProductsActivity"
             android:label="@string/title_activity_catogory_products" >
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pocket.shoppee.activities.ProductDetailsActivity"
+            android:label="@string/title_activity_products_details" >
         </activity>
     </application>
 

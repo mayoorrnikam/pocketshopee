@@ -2,6 +2,7 @@ package com.pocket.shoppee.adapters;
 
 import java.util.ArrayList;
 import android.content.Context;
+import android.text.TextUtils.TruncateAt;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,13 +57,16 @@ public class ShopFragmentAdapter extends BaseAdapter  {
 			
 			TextView tv = (TextView)v.findViewById(R.id.icon_text);
 			tv.setText(textTitleField.get(position));
+			tv.setEllipsize(TruncateAt.END);
+			tv.setLines(1);
 			
 			TextView tvdescription = (TextView)v.findViewById(R.id.icon_textdescription);
 			String descriptionMsg = textDescriptionField.get(position) +"\n";
 			
 			//tvdescription.setText(textDescriptionField.get(position));
 			tvdescription.setText(descriptionMsg);
-			
+			tvdescription.setEllipsize(TruncateAt.END);
+			tvdescription.setLines(1);
 			
 		}
 		else

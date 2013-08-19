@@ -36,6 +36,7 @@ public class Constants {
 	public static final String ShopCategoryImageUrlKey = "image";
 
 	//Category_Products constants
+	//Currently Using the same BASE URL for Category product types and Product Details
 	public static final String Category_Products_InfoKey  = "products";
 	public static final String CategoryProductsListKey = "list";
 	public static final String CategoryProductsIdKey = "id";

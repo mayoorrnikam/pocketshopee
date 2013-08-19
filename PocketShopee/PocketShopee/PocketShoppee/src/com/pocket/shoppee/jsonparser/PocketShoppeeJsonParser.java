@@ -11,6 +11,8 @@ import com.pocket.shoppee.datamodel.CategoryProductsDataManager;
 import com.pocket.shoppee.datamodel.CategoryProductsModel;
 import com.pocket.shoppee.datamodel.DataManager;
 import com.pocket.shoppee.datamodel.FeaturedProductsModel;
+import com.pocket.shoppee.datamodel.ProductDetailsDataManager;
+import com.pocket.shoppee.datamodel.ProductDetailsModel;
 import com.pocket.shoppee.datamodel.ShopDataManager;
 import com.pocket.shoppee.datamodel.ShopModel;
 import com.pocket.shoppee.utility.Constants;
@@ -178,5 +180,44 @@ public class PocketShoppeeJsonParser {
 		    }
 	}
 	
+	
+	public void parseProductDetailsResponse (String jsonString){
+		try {
+			JSONObject jsonObject = new JSONObject(jsonString);
+			JSONObject jsonObject2 = jsonObject.getJSONObject(Constants.Category_Products_InfoKey);
+		      JSONArray jsonArray = jsonObject2.getJSONArray(Constants.CategoryProductsListKey);
+		      Log.i(PocketShoppeeJsonParser.class.getName(),
+		          "Number of entries " + jsonArray.length());
+		      ArrayList<ProductDetailsModel> arrayList = new ArrayList<ProductDetailsModel>();
+		      ProductDetailsModel model = null;
+		      for (int i = 0; i < jsonArray.length(); i++) {
+		    	  model = new ProductDetailsModel();
+		    	  JSONObject jsonDataObject = jsonArray.getJSONObject(i);
+		    	  model.setColor(jsonDataObject.getString(Constants.CategoryProductsColorKey));
+		    	  model.setEntityId(jsonDataObject.getString(Constants.CategoryProductsIdKey));
+		    	  model.setType(jsonDataObject.getString(Constants.CategoryProductsTypeKey));
+		    	  model.setSku(jsonDataObject.getString(Constants.CategoryProductsSkuKey));
+		    	  model.setName(jsonDataObject.getString(Constants.CategoryProductsNameKey));
+		    	  model.setSize(jsonDataObject.getString(Constants.CategoryProductsSizeKey));
+		    	  model.setDescription(jsonDataObject.getString(Constants.CategoryProductsDescriptionKey));
+		    	  model.setPrice(jsonDataObject.getString(Constants.CategoryProductsPriceKey));
+		    	  model.setImageUrl(jsonDataObject.getString(Constants.CategoryProductsImageUrlKey));
+
+		    	  JSONArray jsonCategories = jsonDataObject.getJSONArray(Constants.Category_Key);
+		    	  ArrayList<String> categoriesArray = new ArrayList<String>();
+		    	  for(int j = 0; j < jsonCategories.length() ; j++){
+		    		  categoriesArray.add(jsonCategories.getString(j));
+		    	  }
+		    	  model.setCategoryName(categoriesArray);
+		    	  arrayList.add(model);
+		    	  
+		    	  //Log.i(PocketShoppeeJsonParser.class.getName(), jsonDataObject.getString("CategoryProductsIdKey"));
+		      }
+		      ProductDetailsDataManager productDetailsDataManager = ProductDetailsDataManager.getSharedInstance();
+		      productDetailsDataManager.setProductDetailsArray(arrayList);
+		    } catch (Exception e) {
+		      e.printStackTrace();
+		    }
+	}
 	
 }

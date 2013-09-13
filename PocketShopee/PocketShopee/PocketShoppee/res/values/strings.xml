@@ -6,6 +6,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_shop">ShopActivity</string>
     <string name="title_activity_catogory_products">CatogoryProductsActivity</string>
-    <string name="title_activity_products_details">ProductsDetailsActivity</string>
+    <string name="title_activity_products_details">ProductsDetails</string>
+    
+    
+    <string name="featured">Featured</string>
+    <string name="shop">Shop</string>
+    <string name="favorite">Favorite</string>
+    <string name="notification">Notification</string>
+    <string name="setting">Setting</string>
+    
 
 </resources>

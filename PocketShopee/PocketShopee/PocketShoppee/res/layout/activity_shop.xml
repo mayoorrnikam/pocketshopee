@@ -1,16 +1,169 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ShopActivity" >
+<?xml version="1.0" encoding="utf-8"?>
 
-    <TextView
-        android:layout_width="wrap_content"
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    >
+    
+     <RelativeLayout
+        android:id="@+id/linearhorizontalheader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:orientation="horizontal"
+        android:background="@drawable/header"
+        android:layout_alignParentTop="true">
+        
+	   <TextView
+	       android:id="@+id/title"
+	       android:layout_height="wrap_content"
+	       android:layout_width="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:text="All Products"
+	       android:focusable="true"
+	       android:focusableInTouchMode="true"
+	       android:textColor="#FFFFFF"
+	       android:textSize="22sp"/>
+	   <FrameLayout
+	       android:id="@+id/bagcircleicon"
+	       android:layout_toRightOf="@+id/title"
+	       android:layout_marginLeft="240dp"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_gravity="right" >
 
+	        <ImageView
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:background="@drawable/bag_icon"/>
+	
+		   <ImageView 
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:background="@drawable/circle"/>
+		   
+		   <TextView
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:text="00"
+		       android:textAlignment="textEnd"
+		       android:textColor="@android:color/white" />
+
+	   </FrameLayout>
+	   
+	   <EditText 
+	       android:layout_marginLeft="20dp"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_toRightOf="@+id/bagcircleicon"
+	       android:drawableStart="@drawable/search_icon"
+	       android:paddingLeft="5dp"
+	       android:background="@drawable/search_box"/>
+	   	   
+   </RelativeLayout>
+   
+	<GridView
+	    android:id="@+id/GridView01"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/linearhorizontal"
+	    android:layout_below="@+id/linearhorizontalheader"
+	    android:columnWidth="290dp"
+	    android:gravity="center"
+	    android:horizontalSpacing="10dp"
+	    android:numColumns="3"
+	    android:paddingTop="10dp"
+	    android:paddingRight="30dp"
+	    android:paddingLeft="30dp"
+	    android:paddingBottom="10dp"
+	    android:scrollbars="none"
+	    android:verticalSpacing="20dp" >
+	
+	</GridView>
+
+
+    <LinearLayout
+        android:id="@+id/linearhorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/tabbar"
+        android:layout_alignParentBottom="true">
+        
+        <Button
+            android:id="@+id/featured_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="350dp"
+            android:drawableTop="@drawable/featured_icon"
+            android:background="@android:color/transparent"
+            android:text="@string/featured"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_spacer"/>
+        
+        <Button 
+            android:id="@+id/shop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/shop_icon"
+            android:background="@drawable/selected_nav"
+            android:textColor="#FFFFFF" 
+            android:textSize="12sp"
+            android:text="@string/shop"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_spacer"/>
+		
+		<Button
+            android:id="@+id/favorite_button" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/favorite_icon"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF" 
+            android:textSize="12sp"
+            android:text="@string/favorite"/>
+		
+		<ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_spacer"/>
+        
+        <Button 
+            android:id="@+id/notification_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/notification_icon"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="@string/notification"/>
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_spacer"/>
+        
+        <Button 
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/setting_icon"
+            android:background="@android:color/transparent"
+            android:textColor="#FFFFFF" 
+            android:textSize="12sp"
+            android:text="@string/setting"/>
+        
+    </LinearLayout>
 </RelativeLayout>
+
+

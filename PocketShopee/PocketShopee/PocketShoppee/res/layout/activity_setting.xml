@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/linearhorizontalheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/header"
+        android:layout_alignParentTop="true">
+    
+         <Button 
+             android:id="@+id/backbutton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="20dp"
+             android:background="@drawable/back_btn"/>
+
+        <TextView
+	       android:id="@+id/backtext"
+	       android:layout_height="wrap_content"
+	       android:layout_width="wrap_content"
+	       android:layout_centerVertical="true"
+	       android:text="Done"
+	       android:layout_marginLeft="35dp"
+	       android:textColor="#FFFFFF"
+	       android:textSize="20sp"/>
+        
+	    <TextView
+		       android:id="@+id/title"
+		       android:layout_height="wrap_content"
+		       android:layout_width="wrap_content"
+		       android:layout_centerHorizontal="true"
+		       android:layout_centerVertical="true"
+		       android:text="Setting"
+		       android:textColor="#FFFFFF"
+		       android:textSize="22sp"/>
+	     <!-- Button
+	       android:id="@+id/title"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:background="@android:color/transparent"
+	       android:layout_marginLeft="450dp"
+	       android:text="Featured"
+	       android:textColor="#FFFFFF"
+	       android:textSize="22sp" /-->
+   </RelativeLayout>
+	    
+	    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shopping_cart_left" >
+
+        
+       <Button
+           android:id="@+id/bt1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/left_nav"
+           android:drawableRight="@drawable/slider_arrow_right_press"
+           android:text="Account"
+           android:textColor="#606060"
+           android:textSize="24sp"/>
+    
+           
+        <Button
+           android:id="@+id/bt2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/bt1"
+           android:background="@drawable/left_nav"
+           android:text="Order History"
+           android:textColor="#606060"
+           android:textSize="24sp"/>
+         
+         <Button
+           android:id="@+id/bt3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/bt2"
+           android:background="@drawable/left_nav"
+           android:text="Notification"
+           android:textColor="#606060"
+           android:textSize="24sp"/>
+          
+          <Button
+           android:id="@+id/bt4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/bt3"
+           android:background="@drawable/left_nav"
+           android:text="About"
+           android:textColor="#606060"
+           android:textSize="24sp"/>
+          
+          <Button
+           android:id="@+id/bt5"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/bt4"
+           android:background="@drawable/left_nav"
+           android:text="Logout"
+           android:textColor="#606060"
+           android:textSize="24sp"/>
+          
+          
+      <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:layout_toRightOf="@+id/bt1"
+         android:orientation="vertical"
+         android:background="@android:color/white">
+         
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="120dp"
+		        android:layout_marginTop="100dp"
+		        android:text="Sign In to sync your favorites with PocketShopee"
+		        android:textColor="#606060"
+		        android:textSize="20sp" />
+		    
+		    <TextView
+		        android:id="@+id/textView2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="100dp"
+		        android:text="All web, iPhone and iPad favorites will synchronize seamlessly"
+		        android:textColor="#606060"
+		        android:textSize="20sp" />
+		    
+		    
+		<Button
+           android:id="@+id/signin_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/signin_btn"
+           android:layout_marginLeft="180dp"
+           android:layout_marginTop="20dp"
+           android:text="Sign In"
+           android:textColor="#606060"
+           android:textSize="24sp"/>
+         
+         <Button
+           android:id="@+id/create_account_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/signin_btn"
+           android:layout_marginLeft="180dp"
+           android:layout_marginTop="20dp"
+           android:text="Create Account"
+           android:textColor="#606060"
+           android:textSize="24sp"/>
+          
+          <Button
+           android:id="@+id/facebook_connect"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/fb_connect"
+           android:layout_marginLeft="180dp"
+           android:layout_marginTop="20dp"/>
+		    
+		</LinearLayout>
+    
+    </RelativeLayout>
+
+    
+     
+
+</LinearLayout>

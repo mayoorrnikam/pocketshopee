@@ -19,8 +19,7 @@
             android:name="com.pocket.shoppee.activities.FeaturedProductsActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="com.pocket.shoppee.activities.FEATUREDPRODUCTSACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -37,8 +36,7 @@
             android:name="com.pocket.shoppee.activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.MAINACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -46,7 +44,7 @@
             android:name="com.pocket.shoppee.activities.CategoryProductsActivity"
             android:label="@string/title_activity_catogory_products" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.CATEGORYPRODUCTSACTIVITY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

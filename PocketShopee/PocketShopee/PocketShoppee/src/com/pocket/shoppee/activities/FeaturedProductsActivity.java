@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -234,6 +235,12 @@ public class FeaturedProductsActivity extends FragmentActivity {
 
 		Resources res = getResources();
 
+		int ot = getResources().getConfiguration().orientation;
+		if(Configuration.ORIENTATION_PORTRAIT == ot)
+		{
+			isTablet = false;
+		}
+		
 		// get the default font size of the device.
 		float fontSize = res.getDimension(R.dimen.font_size);
 

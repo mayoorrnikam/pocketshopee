@@ -3,7 +3,7 @@
     android:layout_width="@dimen/icon_width"
     android:layout_height="@dimen/icon_height"
     android:gravity="left"
-    android:background="#EBEBEB"
+    android:background="@drawable/background"
     android:orientation="vertical" >
 
     <ImageView

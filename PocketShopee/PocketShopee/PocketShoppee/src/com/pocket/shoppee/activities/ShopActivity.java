@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -70,6 +71,9 @@ public class ShopActivity extends FragmentActivity {
 		
 		favorite =(Button)findViewById(R.id.favorite_button);
 		
+		if(favorite== null)
+			System.out.println("favorite is NULL");
+		
 		favorite.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -105,29 +109,12 @@ public class ShopActivity extends FragmentActivity {
 				// TODO Auto-generated method stub
 				
 				
-				/*AlertDialog.Builder alertbox = new AlertDialog.Builder(ShopActivity.this);
-				alertbox.setCancelable(true);
-				alertbox.setMessage("Are you sure you want to navigate to other page ?");
 				
-				alertbox.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-
-				public void onClick(DialogInterface arg0, int arg1) {
-				 */
 								Intent featuredIntent = new Intent(ShopActivity.this,FeaturedProductsActivity.class);
 								startActivity(featuredIntent);
 
 
-				/*			}
-
-						});
-				alertbox.setNegativeButton("No",new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface arg0, int arg1) {
-
-							}
-						});
-
-				alertbox.show();
-				 */
+				
 			}
 		});
 		
@@ -160,8 +147,7 @@ public class ShopActivity extends FragmentActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 	
-					/*Intent shopIntent = new Intent(ShopActivity.this,MainActivity.class);
-					startActivity(shopIntent);*/
+					
 				AlertDialog.Builder alertbox = new AlertDialog.Builder(ShopActivity.this);
 				alertbox.setCancelable(true);
 				alertbox.setMessage("This feature is Coming Soon...");
@@ -187,8 +173,7 @@ public class ShopActivity extends FragmentActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 	
-					/*Intent shopIntent = new Intent(ShopActivity.this,MainActivity.class);
-					startActivity(shopIntent);*/
+					
 				AlertDialog.Builder alertbox = new AlertDialog.Builder(ShopActivity.this);
 				alertbox.setCancelable(true);
 				alertbox.setMessage("This feature is Coming Soon...");
@@ -214,8 +199,7 @@ public class ShopActivity extends FragmentActivity {
 
 		@Override
 		protected void onPreExecute() {
-			progressDialog = ProgressDialog.show(ShopActivity.this,
-					"Loading data", "Please wait...");
+			progressDialog = ProgressDialog.show(ShopActivity.this,"Loading data", "Please wait...");
 			super.onPreExecute();
 		}
 
@@ -255,6 +239,12 @@ public class ShopActivity extends FragmentActivity {
 							imagefield.add(url5);
 						else
 							imagefield.add(url6);
+						if(gridView == null)
+							System.out.println("gridView is NULL");
+						
+						if(mShopAdapter== null)
+							System.out.println("mShopAdapter is NULL");
+						
 		             gridView.setAdapter(mShopAdapter);
 		             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -289,16 +279,20 @@ public class ShopActivity extends FragmentActivity {
 		
 		// check if current device is tablet or not.
 		boolean isTablet = getResources().getBoolean(R.bool.isTablet);
-
+		
 		Resources res = getResources();
 
+		int ot = getResources().getConfiguration().orientation;
+		if(Configuration.ORIENTATION_PORTRAIT == ot)
+		{
+			isTablet = false;
+		}
 		// get the default font size of the device.
 		float fontSize = res.getDimension(R.dimen.font_size);
 
 		if (isTablet) {
 
-			Toast.makeText(this, "Current device is Tablet " + fontSize,
-					Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Current device is Tablet " + fontSize, Toast.LENGTH_SHORT).show();
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 		} else {

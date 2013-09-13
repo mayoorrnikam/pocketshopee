@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -72,7 +73,7 @@ public class ProductDetailsActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Toast.makeText(ProductDetailsActivity.this, "Back Clicked", Toast.LENGTH_LONG).show();
+				//Toast.makeText(ProductDetailsActivity.this, "Back Clicked", Toast.LENGTH_LONG).show();
 				finish();
 			}
 		});
@@ -118,7 +119,6 @@ public class ProductDetailsActivity extends FragmentActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				
 				/*AlertDialog.Builder alertbox = new AlertDialog.Builder(ShopActivity.this);
 				alertbox.setCancelable(true);
 				alertbox.setMessage("Are you sure you want to navigate to other page ?");
@@ -127,6 +127,7 @@ public class ProductDetailsActivity extends FragmentActivity {
 
 				public void onClick(DialogInterface arg0, int arg1) {
 				 */
+				
 								Intent featuredIntent = new Intent(ProductDetailsActivity.this,FeaturedProductsActivity.class);
 								startActivity(featuredIntent);
 
@@ -183,6 +184,7 @@ public class ProductDetailsActivity extends FragmentActivity {
 				alertbox.setPositiveButton("Cancel",new DialogInterface.OnClickListener() {
 
 				public void onClick(DialogInterface arg0, int arg1) {
+					
 
 							}
 
@@ -277,11 +279,23 @@ public class ProductDetailsActivity extends FragmentActivity {
 						
 							imagefield.add(url1);
 						
-							ImageView iv = (ImageView)findViewById(R.id.product_big_box);
+							ImageView iv = (ImageView)findViewById(R.id.thumbsmall1);
 							iv.setTag(imagefield.get(0));
 							new DownloadImageTask().execute(iv);
 							
-							System.out.println("Inside the Product Details Activity !!!");
+							ImageView thumb1 = (ImageView)findViewById(R.id.thumbsmall2);
+							thumb1.setTag(imagefield.get(0));
+							new DownloadImageTask().execute(thumb1);
+							
+							
+							ImageView thumb2 = (ImageView)findViewById(R.id.thumbsmall3);
+							thumb2.setTag(imagefield.get(0));
+							new DownloadImageTask().execute(thumb2);
+							
+							
+							ImageView thumb3 = (ImageView)findViewById(R.id.product_big_box);
+							thumb3.setTag(imagefield.get(0));
+							new DownloadImageTask().execute(thumb3);
 							
 							TextView tv = (TextView)findViewById(R.id.icon_text);
 							tv.setText(textTitleField.get(0));
@@ -329,6 +343,12 @@ public class ProductDetailsActivity extends FragmentActivity {
 
 		Resources res = getResources();
 
+		int ot = getResources().getConfiguration().orientation;
+		if(Configuration.ORIENTATION_PORTRAIT == ot)
+		{
+			isTablet = false;
+		}
+		
 		// get the default font size of the device.
 		float fontSize = res.getDimension(R.dimen.font_size);
 
